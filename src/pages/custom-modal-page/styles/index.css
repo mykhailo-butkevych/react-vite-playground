@@ -1,0 +1,86 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  align-items: center;
+  justify-content: start;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(242, 242, 242);
+  background-image: radial-gradient(
+    rgba(31, 41, 55, 0.2) 0.5px,
+    rgb(242, 242, 242) 0.5px
+  );
+  background-size: 5px 5px;
+  background-position: top;
+  background-repeat: repeat;
+
+  font-weight: bold;
+  gap: 2rem;
+}
+
+.custom-button {
+  min-width: 5rem;
+  min-height: 2rem;
+  border: 2px solid #27263b;
+  background-color: white;
+}
+
+.Modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+  }
+  
+  .Modal-show {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  
+  .Modal-panel {
+    padding: 1rem;
+    background-color: #fff;
+    opacity: 0.9;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid;
+    box-shadow: 0 10px 20px rgba(black, 0.2);
+    border-radius: 0.5em;
+    border-color: rgba(10, 62, 84, 0.8);
+  }
+  
+  .Modal-header {
+    margin: 0;
+    color: rgba(0, 68, 255, 0.815);
+    font-size: 1.1em;
+    line-height: 1;
+    text-align: center;
+  }
+  
+  .Modal-content {
+    margin-top: 1rem;
+    color: #27263be8;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+  
+  .Modal-footer {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    text-align: center;
+  }
+  

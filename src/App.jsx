@@ -1,14 +1,15 @@
-import './App.css'
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/home';
-import AutoHidingStickyNav from './pages/auto-hiding-sticky-nav';
+import StickyNavPage from './pages/sticky-nav-page';
+import CustomModalPage from './pages/custom-modal-page';
 
 function App() {
   return (
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/sticky-nav" element={<AutoHidingStickyNav />} />
+        <Route path="/sticky-nav" element={<StickyNavPage />} />
+        <Route path="/custom-modal" element={<CustomModalPage />} />
       </Routes>
     </div>
   )

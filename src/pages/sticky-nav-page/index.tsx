@@ -1,7 +1,8 @@
+// https://www.frontend.fyi/recipes/framer-motion/auto-hiding-sticky-navigation#
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import React, { useRef, useState } from "react";
 
-const Nav = () => {
+const AutoHidingStickyNav = () => {
   const [isHidden, setIsHidden] = useState(false);
   const { scrollY } = useScroll();
   const lastYRef = useRef(0);
@@ -52,10 +53,10 @@ const Nav = () => {
   );
 };
 
-function About() {
+function StickyNavPage() {
   return (
     <div className="min-h-[300vh] bg-gradient-to-b from-[rgba(255,255,255,.1)] to-[rgba(255,255,255,0)]">
-      <Nav />
+      <AutoHidingStickyNav />
       <div className="overflow-clip opacity-30">
         <p className="break-all text-[30vw] text-white">
           Beautiful sticky navigation that plays peek-a-boo 👻 on scroll
@@ -65,4 +66,4 @@ function About() {
   );
 }
 
-export default About;
+export default StickyNavPage;
